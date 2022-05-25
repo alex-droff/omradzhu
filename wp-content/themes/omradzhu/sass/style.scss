@@ -1,0 +1,61 @@
+@import "wpstyle";
+
+/* Reset CSS*/
+
+@import "reset";
+
+/* /Reset CSS*/
+
+//Colors
+$d_brown: #640D0D;
+$brown:#9F4A4A;
+$orange: #F34F0F;
+$d_orange: #BD420D;
+$yellow: #FDEEA5;
+$l_yellow: #F2E5C2;
+$red: #DF1818;
+$white-yellow: linear-gradient(90deg, white 0%, $yellow 100%);
+$vert-orange:linear-gradient(180deg, #E22D0E 0%, #F18A32 100%);
+$mob_padding: 4.8vw; //left&right padding in mob version
+$main_col: 1200px; //width of main column
+$brd: .5rem; //border-radius of tabs on desktop
+$brm: .9rem; //border-radius of tabs on mobiles
+@mixin mobile-padding {
+    padding-left: $mob_padding;
+    padding-right: $mob_padding;
+}
+
+@mixin container_width {
+    max-width: $main_col;
+    margin-left: auto;
+    margin-right: auto;
+    @media all and (max-width: 768px) {
+        max-width: 100%;
+        @include mobile-padding;
+    }
+}
+
+
+/* -----------Desktop & common styles-------------- */
+
+@import "main";
+
+/* -----------/Desktop & common styles-------------- */
+
+
+/* ----------------Mobile styles---------- */
+
+@media all and (max-width:768px) {
+    @import "mobile";
+}
+
+@media all and (max-width:320px) {
+    @import "mobile_small";
+}
+
+@media all and (min-width:415px) and (max-width:768px) {
+    @import "mobile_ipad";
+}
+
+
+/* ----------------/Mobile styles---------- */
