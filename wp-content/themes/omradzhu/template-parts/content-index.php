@@ -10,7 +10,18 @@
 ?>
 <div class="index-page">
 <div class="hero">
-	<h1>Наталья <br>Джунковская <br>(Омра)</h1>
-	<img src="<?=get_template_directory_uri();?>/i/hero_omra.png" alt="">
+	<div class="info">
+		<h1>Наталья <br>Джунковская <br><span>(Омра)</span></h1>
+		<ul>
+			<li>ведущая семинаров и народных праздников</li> 
+			<li>исследовательница древних традиций, <br>адаптирующая их в современную жизнь</li>
+			<li>семейный психолог</li>
+			<li>путешественница </li>
+			<li>этнограф</li>
+		</ul>
+	</div>
+</div>
+<div class="after-hero">
+	<div></div><div></div><div></div>
 </div>
 </div>

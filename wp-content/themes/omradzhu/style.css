@@ -1028,6 +1028,97 @@ h6 {
   clear: both;
 }
 
+.site-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto minmax(960px, 1728px) auto;
+      grid-template-columns: auto minmax(960px, 1728px) auto;
+  height: 95px;
+}
+
+.site-header > div:first-of-type {
+  border-bottom: 3px solid #F97B0C;
+}
+
+.site-header .header-content {
+  border-left: 3px solid #F97B0C;
+  border-bottom: 3px solid #F97B0C;
+}
+
+/*Home*/
+.hero {
+  max-width: 1728px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #BD420D;
+  padding: 18rem;
+  background-image: url(i/hero_omra.png);
+  background-size: auto 42vw;
+  background-position: right 10% bottom 0;
+  background-repeat: no-repeat;
+  border-left: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 100%);
+  border-width: 3px;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -3px;
+  border-radius: inherit;
+  border-right: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 85%, transparent 95%, transparent 100%);
+  border-width: 3px;
+}
+
+.hero h1 {
+  font-size: 4.8vw;
+  line-height: 1.35;
+}
+
+.hero h1 span {
+  font-size: 60%;
+  display: block;
+  margin-top: .1em;
+}
+
+.hero ul {
+  list-style: disc outside;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-left: 1em;
+}
+
+.hero ul li {
+  line-height: 1.35;
+}
+
+.after-hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto minmax(960px, 1728px) auto;
+      grid-template-columns: auto minmax(960px, 1728px) auto;
+  height: 2rem;
+}
+
+.after-hero > div:nth-of-type(2),
+.after-hero > div:nth-of-type(3) {
+  border-top: 3px solid #DA170E;
+}
+
 /* -----------/Desktop & common styles-------------- */
 /* ----------------Mobile styles---------- */
 /* ----------------/Mobile styles---------- */
