@@ -1048,14 +1048,12 @@ h6 {
 /*Home*/
 .hero {
   max-width: 1728px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #BD420D;
   padding: 18rem;
   background-image: url(i/hero_omra.png);
@@ -1106,17 +1104,161 @@ h6 {
   line-height: 1.35;
 }
 
-.after-hero {
+.spacer-liner {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto minmax(960px, 1728px) auto;
       grid-template-columns: auto minmax(960px, 1728px) auto;
-  height: 2rem;
+  height: 3rem;
 }
 
-.after-hero > div:nth-of-type(2),
-.after-hero > div:nth-of-type(3) {
+.spacer-liner > div:nth-of-type(2),
+.spacer-liner > div:nth-of-type(3) {
   border-top: 3px solid #DA170E;
+}
+
+.spacer-liner.botm > div:nth-of-type(2),
+.spacer-liner.botm > div:nth-of-type(3) {
+  border-bottom: 3px solid #DA170E;
+  border-top: none;
+}
+
+.shcedule_cta {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F67836), to(#C8160C));
+  background: linear-gradient(180deg, #F67836 0%, #C8160C 100%);
+  padding: 3rem 0;
+  color: white;
+}
+
+.shcedule_cta > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shcedule_cta > div h3 {
+  padding: 3rem 3rem 3rem 9rem;
+  background: url(i/calendar.svg) left center no-repeat;
+  background-size: 6.7rem;
+  font-family: 'PT Serif', serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.shcedule_cta > div a {
+  display: block;
+  border: 3px solid #FAF8F2;
+  border-radius: 44px;
+  color: #FAF8F2;
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  line-height: 2rem;
+  margin-top: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.shcedule_cta > div a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #FAF8F2;
+  color: #F67836;
+}
+
+.welcome > div {
+  max-width: 1728px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem 18rem;
+  border-left: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 60%, transparent 80%, transparent 100%);
+  border-width: 3px;
+  background: url(i/mandala.png) center right no-repeat;
+  background-size: 99rem;
+}
+
+.welcome > div h2 {
+  font-size: 6.5rem;
+  line-height: 1.4;
+  color: #BD420D;
+  font-weight: 400;
+  padding-top: 3rem;
+}
+
+.welcome > div p {
+  font-size: 2.4rem;
+  line-height: 1.4;
+  margin: 1.5em 0;
+  color: #9F4A4A;
+}
+
+.welcome > div p.orbg {
+  font-size: 2.2rem;
+  padding: 3rem 4.5rem;
+  background-color: #F34F0F;
+  color: white;
+  -webkit-box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
+  margin-bottom: 6rem;
+}
+
+.welcome--p1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  gap: 7.5rem;
+}
+
+.welcome--p1 > div:last-of-type {
+  background: url(i/pic_01.jpg) center center no-repeat;
+  background-size: cover;
+  -webkit-filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+  border-radius: 9rem;
+  position: relative;
+  background-clip: padding-box;
+  border: solid 3px #F34F0F;
+}
+
+.welcome--p2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 54% auto;
+      grid-template-columns: 54% auto;
+  gap: 9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6rem auto;
+}
+
+.welcome--p2 > div:first-of-type {
+  background: url(i/pic_02.jpg) center center no-repeat;
+  background-size: cover;
+  -webkit-filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+  border-radius: 9rem;
+  position: relative;
+  background-clip: padding-box;
+  border: solid 3px #F34F0F;
+  min-height: 47.8rem;
+}
+
+.welcome--p2 .orbg {
+  max-width: 70%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* -----------/Desktop & common styles-------------- */

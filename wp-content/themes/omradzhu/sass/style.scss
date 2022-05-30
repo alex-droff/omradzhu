@@ -21,10 +21,14 @@ $vert-orange:linear-gradient(180deg, #E22D0E 0%, #F18A32 100%);
 $vert-red:linear-gradient(180deg, $red2 0%, $orange2 100%);
 $vert-red-reverse:linear-gradient(180deg, $orange2 0%, $red2 100%);
 $vert-red-transparent:linear-gradient(180deg, $orange2 0%, $red2 85%, transparent 95%, transparent 100%);
+$vert-red-transparent-ext:linear-gradient(180deg, $orange2 0%, $red2 60%, transparent 80%, transparent 100%);
+$cta_gradient: linear-gradient(180deg, #F67836 0%, #C8160C 100%);
 $mob_padding: 4.8vw; //left&right padding in mob version
 $main_col: 1200px; //width of main column
 $brd: .5rem; //border-radius of tabs on desktop
 $brm: .9rem; //border-radius of tabs on mobiles
+$border: 3px;
+$maxblock:1728px;
 @mixin mobile-padding {
     padding-left: $mob_padding;
     padding-right: $mob_padding;
@@ -38,6 +42,13 @@ $brm: .9rem; //border-radius of tabs on mobiles
         max-width: 100%;
         @include mobile-padding;
     }
+}
+
+@mixin index_block {
+    max-width: $maxblock;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

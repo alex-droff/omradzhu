@@ -4,8 +4,6 @@ html {
     font-size: 10px;
 }
 
-$border: 3px;
-$maxblock:1728px;
 
 /* Typography */
 
@@ -43,12 +41,8 @@ h6 {
 /*Home*/
 
 .hero {
-    max-width: $maxblock;
+    @include index_block;
     display: flex;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
     color: $d_orange;
     padding: 18rem;
     background-image: url(i/hero_omra.png);
@@ -94,12 +88,126 @@ h6 {
     }
 }
 
-.after-hero {
+.spacer-liner {
     display: grid;
     grid-template-columns: auto minmax(960px, 1728px) auto;
-    height: 2rem;
+    height: 3rem;
     &>div:nth-of-type(2),
     &>div:nth-of-type(3) {
         border-top: $border solid $red2;
+    }
+    &.botm {
+        &>div:nth-of-type(2),
+        &>div:nth-of-type(3) {
+            border-bottom: $border solid $red2;
+            border-top: none;
+        }
+    }
+}
+
+.shcedule_cta {
+    background: $cta_gradient;
+    padding: 3rem 0;
+    color: white;
+    &>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            padding: 3rem 3rem 3rem 9rem;
+            background: url(i/calendar.svg) left center no-repeat;
+            background-size: 6.7rem;
+            font-family: 'PT Serif', serif;
+            font-size: 3rem;
+            font-weight: 400;
+        }
+        a {
+            display: block;
+            border: 3px solid #FAF8F2;
+            border-radius: 44px;
+            color: #FAF8F2;
+            font-size: 2rem;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            line-height: 2rem;
+            margin-top: .5rem;
+            transition: all .3s ease;
+            &:hover {
+                transform: scale(1.05);
+                background-color: #FAF8F2;
+                color: #F67836;
+            }
+        }
+    }
+}
+
+.welcome>div {
+    @include index_block;
+    padding: 6rem 18rem;
+    border-left: $border solid;
+    border-image-slice: 1;
+    border-image-source: $vert-red-transparent-ext;
+    border-width: $border;
+    background: url(i/mandala.png) center right no-repeat;
+    background-size: 99rem;
+    h2 {
+        font-size: 6.5rem;
+        line-height: 1.4;
+        color: $d_orange;
+        font-weight: 400;
+        padding-top: 3rem;
+    }
+    p {
+        font-size: 2.4rem;
+        line-height: 1.4;
+        margin: 1.5em 0;
+        color: $brown;
+        &.orbg {
+            font-size: 2.2rem;
+            padding: 3rem 4.5rem;
+            background-color: $orange;
+            color: white;
+            box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+            border-radius: 57px;
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+.welcome--p1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 7.5rem;
+    &>div:last-of-type {
+        background: url(i/pic_01.jpg) center center no-repeat;
+        background-size: cover;
+        filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+        border-radius: 9rem;
+        position: relative;
+        background-clip: padding-box;
+        border: solid $border $orange;
+    }
+}
+
+.welcome--p2 {
+    display: grid;
+    grid-template-columns: 54% auto;
+    gap: 9rem;
+    align-items: center;
+    margin: 6rem auto;
+    &>div:first-of-type {
+        background: url(i/pic_02.jpg) center center no-repeat;
+        background-size: cover;
+        filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+        border-radius: 9rem;
+        position: relative;
+        background-clip: padding-box;
+        border: solid $border $orange;
+        min-height: 47.8rem;
+    }
+    .orbg {
+        max-width: 70%;
+        font-size: 2rem;
+        text-align: center;
     }
 }
