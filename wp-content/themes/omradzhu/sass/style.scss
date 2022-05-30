@@ -14,8 +14,10 @@ $orange2: #F97B0C;
 $d_orange: #BD420D;
 $yellow: #FDEEA5;
 $l_yellow: #F2E5C2;
+$yellow2:#E4DBBB;
 $red: #DF1818;
 $red2:#DA170E;
+$red3:#C30808;
 $white-yellow: linear-gradient(90deg, white 0%, $yellow 100%);
 $vert-orange:linear-gradient(180deg, #E22D0E 0%, #F18A32 100%);
 $vert-red:linear-gradient(180deg, $red2 0%, $orange2 100%);
@@ -32,6 +34,11 @@ $maxblock:1728px;
 @mixin mobile-padding {
     padding-left: $mob_padding;
     padding-right: $mob_padding;
+}
+
+@mixin mauto {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @mixin container_width {
