@@ -15,10 +15,7 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     clear: both;
@@ -103,6 +100,42 @@ h6 {
             border-top: none;
         }
     }
+    &.rev {
+        &>div:nth-of-type(1),
+        &>div:nth-of-type(2) {
+            border-bottom: $border solid $red2;
+            border-top: none;
+        }
+        &>div:nth-of-type(3) {
+            border: none;
+        }
+        &.top {
+            &>div:nth-of-type(1),
+            &>div:nth-of-type(2) {
+                border-top: $border solid $red2;
+                border-bottom: none;
+            }
+            &>div:nth-of-type(3) {
+                border: none;
+            }
+        }
+    }
+}
+
+.redbut {
+    display: inline-block;
+    background-color: $red;
+    color: $l_grey;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 3rem;
+    transition: .3s all ease;
+    text-decoration: none;
+    &:hover {
+        transform: scale(1.1);
+        transform: translateY(-.2rem);
+    }
 }
 
 .shcedule_cta {
@@ -141,6 +174,16 @@ h6 {
     }
 }
 
+p.orbg {
+    font-size: 2.2rem;
+    padding: 3rem 4.5rem;
+    background-color: $orange;
+    color: $l_grey;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+    border-radius: 57px;
+    margin-bottom: 6rem;
+}
+
 .welcome>div {
     @include index_block;
     padding: 6rem 18rem;
@@ -164,12 +207,8 @@ h6 {
         color: $brown;
         &.orbg {
             font-size: 2.2rem;
-            padding: 3rem 4.5rem;
-            background-color: $orange;
-            color: white;
-            box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
-            border-radius: 57px;
             margin-bottom: 6rem;
+            color: $l_grey;
         }
     }
 }
@@ -181,11 +220,8 @@ h6 {
     &>div:last-of-type {
         background: url(i/pic_01.jpg) center center no-repeat;
         background-size: cover;
-        filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
-        border-radius: 9rem;
         position: relative;
-        background-clip: padding-box;
-        border: solid $border $orange;
+        @include imgroundborder;
     }
 }
 
@@ -198,17 +234,15 @@ h6 {
     &>div:first-of-type {
         background: url(i/pic_02.jpg) center center no-repeat;
         background-size: cover;
-        filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
-        border-radius: 9rem;
         position: relative;
-        background-clip: padding-box;
-        border: solid $border $orange;
+        @include imgroundborder;
         min-height: 47.8rem;
     }
     .orbg {
         max-width: 70%;
         font-size: 2rem;
         text-align: center;
+        color: $l_grey;
     }
 }
 
@@ -271,5 +305,157 @@ h6 {
             background-color: $yellow2;
             color: $red3;
         }
+    }
+}
+
+.useful {
+    background-image: url(i/mandala.png), url(i/mandala.png);
+    background-position: left -27% center, right -27% center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 72rem;
+    &>div {
+        @include index_block;
+        padding: 12rem 18rem;
+        h2 {
+            color: $d_orange;
+            text-align: center;
+            font-size: 6.4rem;
+        }
+        .orbg {
+            @include mauto;
+            text-align: center;
+            margin-top: 6rem;
+            line-height: 1.4;
+            &.bl_1 {
+                font-size: 2.8rem;
+                max-width: 70%;
+            }
+            &.bl_2 {
+                font-size: 2.5rem;
+            }
+        }
+        .two_col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1300px;
+            @include mauto;
+            &.rev {
+                text-align: right;
+                gap: 6rem;
+                p:not(.orbg) {
+                    padding-right: 0;
+                }
+                h3 {
+                    padding-top: 0;
+                }
+            }
+            h3 {
+                color: $d_orange;
+                font-size: 4.1rem;
+                margin-bottom: 1em;
+                font-weight: 400;
+                padding-top: 3rem;
+                line-height: 1.4;
+            }
+            p:not(.orbg) {
+                color: $brown;
+                font-size: 2rem;
+                line-height: 1.4;
+                padding-right: 10%;
+                margin-bottom: 3rem;
+            }
+            .pic_03,
+            .pic_04,
+            .pic_05 {
+                background: url(i/pic_03.jpg) center center no-repeat;
+                background-size: cover;
+                @include imgroundborder;
+            }
+            .pic_04 {
+                background: url(i/pic_04.jpg) center center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    &.bl2 {
+        background-position: left -27% bottom, right -27% bottom;
+        &>div {
+            padding-bottom: 1rem;
+        }
+    }
+    .pic_05 {
+        background: url(i/pic_05.png) center center no-repeat;
+        background-size: cover;
+        max-width: 79rem;
+        height: 59rem;
+        @include mauto;
+        margin-top: 3rem;
+        @include imgroundborder;
+        margin-top: 6rem;
+    }
+}
+
+.pic_tstm {
+    width: 24rem;
+    height: 24rem;
+    border: $border $orange solid;
+    border-radius: 100%;
+    @include mauto;
+    position: relative;
+    &>div {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        top: 1.7rem;
+        left: 1.7rem;
+        border-radius: 100%;
+    }
+}
+
+.testimonial>div {
+    @include index_block;
+    padding: 3rem 18rem 4.5rem;
+    border-left: $border solid;
+    border-image-slice: 1;
+    border-image-source: $vert-red-transparent-ext;
+    border-width: $border;
+    text-align: center;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        right: 0;
+        height: 100%;
+        border-left: $border solid;
+        border-image-slice: 1;
+        border-image-source: $vert-red-transparent-ext-rev;
+        border-width: $border;
+        top: 0;
+    }
+    &.double {
+        display: flex;
+        &>div {
+            max-width: 50%;
+            p {
+                margin: 1em 0;
+            }
+        }
+    }
+    .pic_tstm>div {
+        background: url(i/anna_z.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    h4 {
+        font-size: 2.8rem;
+        color: $d_orange;
+        margin: .6em 0 1.2rem;
+    }
+    p {
+        color: $brown;
+        font-size: 1.5rem;
+        padding: 0 20%;
+        line-height: 1.4;
     }
 }

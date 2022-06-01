@@ -7,6 +7,7 @@
 /* /Reset CSS*/
 
 //Colors
+$l_grey:#F4F1E9;
 $d_brown: #640D0D;
 $brown:#9F4A4A;
 $orange: #F34F0F;
@@ -24,6 +25,7 @@ $vert-red:linear-gradient(180deg, $red2 0%, $orange2 100%);
 $vert-red-reverse:linear-gradient(180deg, $orange2 0%, $red2 100%);
 $vert-red-transparent:linear-gradient(180deg, $orange2 0%, $red2 85%, transparent 95%, transparent 100%);
 $vert-red-transparent-ext:linear-gradient(180deg, $orange2 0%, $red2 60%, transparent 80%, transparent 100%);
+$vert-red-transparent-ext-rev:linear-gradient(0deg, $red2 0%, $orange2 60%, transparent 80%, transparent 100%);
 $cta_gradient: linear-gradient(180deg, #F67836 0%, #C8160C 100%);
 $mob_padding: 4.8vw; //left&right padding in mob version
 $main_col: 1200px; //width of main column
@@ -56,6 +58,14 @@ $maxblock:1728px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+
+@mixin imgroundborder {
+    filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+    border-radius: 9rem;
+    position: relative;
+    background-clip: padding-box;
+    border: solid $border $orange;
 }
 
 
