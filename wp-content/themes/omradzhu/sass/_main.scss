@@ -472,3 +472,48 @@ p.orbg {
         line-height: 1.4;
     }
 }
+
+.slider {
+    background: $vert-orange-sl;
+    &>div {
+        @include index_block;
+        padding: 4.5rem 22rem;
+    }
+    .carousel-item {
+        min-height: 26vw;
+        border-radius: 6rem;
+    }
+    .owl-carousel {
+        .owl-nav {
+            position: absolute;
+            top: 44%;
+            width: 116%;
+            left: -8%;
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 8rem;
+                height: 8rem;
+                display: block;
+                background: url(i/w-arrow.svg) center center no-repeat;
+                background-size: cover;
+                opacity: .9;
+                transition: all .3s ease;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+                span {
+                    display: none;
+                }
+                &.owl-next {
+                    transform: rotate(180deg);
+                    &:hover {
+                        opacity: 1;
+                        transform: rotate(180deg) scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

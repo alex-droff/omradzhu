@@ -152,4 +152,21 @@
 			</div>
 		</div>
 	</section>
+	<section class="slider">
+		<div>
+			<div id="js-carousel-1" class="owl-carousel">
+			<?php
+			$slider = CFS()->get('slider_gallery');
+			$j=0;
+			foreach ($slider as $slide){?>
+				<div class="carousel-item item-<?=$j?>" style="background:url(<?= $slide['slider_photo'];?>) center center no-repeat;background-size:cover">
+				</div>			
+			<?
+			$j++;  
+			}
+			?>
+			
+			</div>
+		</div>
+	</section>
 </div>
