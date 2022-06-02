@@ -1330,6 +1330,12 @@ p.orbg {
   font-size: 2.5rem;
 }
 
+.useful > div .orbg.bl_3 {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-top: 0;
+}
+
 .useful > div .two_col {
   display: -ms-grid;
   display: grid;
@@ -1354,6 +1360,11 @@ p.orbg {
   padding-top: 0;
 }
 
+.useful > div .two_col.bl_3 {
+  -ms-grid-columns: 60% auto;
+      grid-template-columns: 60% auto;
+}
+
 .useful > div .two_col h3 {
   color: #BD420D;
   font-size: 4.1rem;
@@ -1373,7 +1384,8 @@ p.orbg {
 
 .useful > div .two_col .pic_03,
 .useful > div .two_col .pic_04,
-.useful > div .two_col .pic_05 {
+.useful > div .two_col .pic_05,
+.useful > div .two_col .pic_06 {
   background: url(i/pic_03.jpg) center center no-repeat;
   background-size: cover;
   -webkit-filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
@@ -1386,6 +1398,11 @@ p.orbg {
 
 .useful > div .two_col .pic_04 {
   background: url(i/pic_04.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.useful > div .two_col .pic_06 {
+  background: url(i/pic_06.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -1441,7 +1458,7 @@ p.orbg {
   padding: 3rem 18rem 4.5rem;
   border-left: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 60%, transparent 80%, transparent 100%);
+  border-image-source: linear-gradient(180deg, #DA170E 0%, #F97B0C 60%, transparent 80%, transparent 100%);
   border-width: 3px;
   text-align: center;
   position: relative;

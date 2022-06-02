@@ -333,6 +333,11 @@ p.orbg {
             &.bl_2 {
                 font-size: 2.5rem;
             }
+            &.bl_3 {
+                font-size: 2.5rem;
+                display: inline-block;
+                margin-top: 0;
+            }
         }
         .two_col {
             display: grid;
@@ -349,6 +354,9 @@ p.orbg {
                 h3 {
                     padding-top: 0;
                 }
+            }
+            &.bl_3 {
+                grid-template-columns: 60% auto;
             }
             h3 {
                 color: $d_orange;
@@ -367,13 +375,18 @@ p.orbg {
             }
             .pic_03,
             .pic_04,
-            .pic_05 {
+            .pic_05,
+            .pic_06 {
                 background: url(i/pic_03.jpg) center center no-repeat;
                 background-size: cover;
                 @include imgroundborder;
             }
             .pic_04 {
                 background: url(i/pic_04.jpg) center center no-repeat;
+                background-size: cover;
+            }
+            .pic_06 {
+                background: url(i/pic_06.jpg) center center no-repeat;
                 background-size: cover;
             }
         }
@@ -418,7 +431,7 @@ p.orbg {
     padding: 3rem 18rem 4.5rem;
     border-left: $border solid;
     border-image-slice: 1;
-    border-image-source: $vert-red-transparent-ext;
+    border-image-source: $vert-orange-transparent-ext;
     border-width: $border;
     text-align: center;
     position: relative;
