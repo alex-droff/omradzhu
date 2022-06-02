@@ -25,6 +25,10 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'index' );
 
+			else:
+
+				get_template_part( 'template-parts/content', 'page' );
+
 			endif;
 
 		endwhile; // End of the loop.

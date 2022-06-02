@@ -39,6 +39,12 @@
             }
         });
 
+        $('.totop').click(function() {
+            $("html, body").animate({
+                scrollTop: $('body').offset().top
+            }, 1000);
+        })
+
 
     });
 })(jQuery);
