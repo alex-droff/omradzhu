@@ -21,6 +21,10 @@ h3 {
     clear: both;
 }
 
+p {
+    font-size: 1.5rem;
+}
+
 .site-header {
     display: grid;
     grid-template-columns: auto minmax(960px, $maxblock) auto;
@@ -343,7 +347,7 @@ p.orbg {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
-            max-width: 1300px;
+            /* max-width: 1300px; */
             @include mauto;
             &.rev {
                 text-align: right;
@@ -467,7 +471,6 @@ p.orbg {
     }
     p {
         color: $brown;
-        font-size: 1.5rem;
         padding: 0 20%;
         line-height: 1.4;
     }
@@ -475,9 +478,10 @@ p.orbg {
 
 .slider {
     background: $vert-orange-sl;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
     &>div {
         @include index_block;
-        padding: 4.5rem 22rem;
+        padding: 4.5rem 18rem;
     }
     .carousel-item {
         min-height: 26vw;
@@ -518,6 +522,144 @@ p.orbg {
     }
 }
 
+.offer-form {
+    background: $white-yellow;
+    padding: 6rem $mob_padding;
+    align-items: center;
+    &>div {
+        max-width: 1200px;
+        @include mauto;
+        display: grid;
+        grid-template-columns: auto 50%;
+        gap: 9rem;
+        &>div:first-of-type {
+            font-size: 3rem;
+            text-align: center;
+            line-height: 1.3;
+            padding-top: 40rem;
+            background: url(i/uzor_01.svg) top 8rem center no-repeat;
+            background-size: auto 30rem;
+            p.orbg {
+                font-size: 2.2rem;
+                padding: 2rem 4.5rem;
+                border-radius: 57px;
+                margin-bottom: 6rem;
+            }
+        }
+    }
+}
+
+.offer-form form {
+    color: #C17F15;
+    padding-top: 2rem;
+    margin: 0 6rem;
+    p {
+        margin: 1em 0;
+        font-size: 1.4rem;
+        span:first-of-type {
+            display: block;
+            padding-left: 2rem;
+        }
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        color: $d_brown;
+        border: transparent;
+        border-radius: 3rem;
+        padding: .7rem 2rem;
+        background: $yellow2;
+        margin-top: -.5rem;
+        font-size: 1.4rem;
+    }
+    input[type="submit"] {
+        width: 40%;
+        display: block;
+        @include mauto;
+        margin-top: 3rem;
+        padding: 1.5rem 0;
+        background: $red3;
+        border-radius: 3rem;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.1);
+            background-color: $yellow2;
+            color: $red3;
+        }
+    }
+}
+
+.yelbg {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-top: 0;
+    background-color: #FDEDA1;
+    padding: 1rem 2rem;
+    color: #C92610;
+    border-radius: 3rem;
+}
+
+.courses {
+    background: $courses_gradient;
+    padding: 6rem 0;
+    .steps {
+        background: url(i/steps_bg_01.png) top left no-repeat;
+        background-size: 96% auto;
+        color: $l_grey;
+        &>div {
+            @include index_block;
+            padding: 6rem 18rem 4.5rem;
+        }
+        .intro {
+            display: grid;
+            grid-template-columns: 50% auto;
+            h3 {
+                font-size: 4rem;
+                margin-bottom: 9rem;
+            }
+            ul {
+                padding-left: 3rem;
+            }
+            li {
+                list-style: disc;
+                font-size: 2.8rem;
+                margin-bottom: .4em;
+            }
+        }
+        .steps_get {
+            background: url(i/steps_group_01.png) top left no-repeat;
+            background-size: 100% auto;
+            min-height: 48rem;
+            &>div {
+                display: grid;
+                grid-template-columns: 33% 34% 33%;
+                &>div {
+                    text-align: center;
+                    padding-left: 20%;
+                    padding-right: 20%;
+                    font-size: 2rem;
+                    line-height: 1.4;
+                    &:first-of-type {
+                        padding-top: 24rem;
+                        padding-left: 16%;
+                    }
+                    &:nth-of-type(2) {
+                        padding-top: 18rem;
+                    }
+                    &:nth-of-type(3) {
+                        padding-top: 10rem;
+                        padding-left: 28%;
+                        padding-right: 10%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /* ----------FOOTER----------- */
 
@@ -551,15 +693,15 @@ footer {
                 background-size: cover;
                 &.youtube {
                     width: 6.6rem;
-                    background: url('i/icon-youtube.svg') center center no-repeat;
+                    background: url('i/icon-youtube.svg') left center no-repeat;
                 }
                 &.instagram {
                     width: 5.1rem;
-                    background: url('i/icon-instagram.svg') center center no-repeat;
+                    background: url('i/icon-instagram.svg') left center no-repeat;
                 }
                 &.facebook {
-                    width: 2.8rem;
-                    background: url('i/icon-facebook.svg') center center no-repeat;
+                    width: 2.7rem;
+                    background: url('i/icon-facebook.svg') left center no-repeat;
                 }
             }
         }

@@ -169,4 +169,39 @@
 			</div>
 		</div>
 	</section>
+	<section class="courses">
+		<div class="steps">
+			<div class="intro">
+				<div>
+					<h3>Курс “Ступени I, II, III, IV” </h3>
+					<p class="yelbg">Что вы получаете, пройдя этот курс?</p>
+				</div>
+				<div>
+					<ul>
+						<li>Комплексный курс из 40 занятий</li> 
+						<li>Одна ступень - 10 часов</li> 
+						<li>Одно занятие - 3 часа</li>
+					</ul>
+				</div>
+			</div>
+			<div class="steps_get">
+				<div>
+					<div>Вы учитесь глубоко и качественно расслабляться на бытовом, родовом и кармическом уровнях</div>
+					<div>Вы соединяетесь со своим источником, ваша энергетическая способность увеличивается</div>
+					<div>Вы освобождаетесь от психологических ловушек, в которые попадает большинство людей</div>
+				</div>
+			</div>
+		</div>
+		<div class="archetypes"></div>
+	</section>
+	<section class="offer-form">
+		<div>
+			<div>
+				<p class="orbg">Выберите услугу от Натальи Джунковской</p>
+			</div>
+			<div>
+				<?= do_shortcode('[contact-form-7 id="20" title="Заказ услуги"]');?>
+			</div>
+		</div>
+	</section>
 </div>
