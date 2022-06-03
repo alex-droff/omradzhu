@@ -32,11 +32,17 @@ $vert-red-transparent-ext-rev:linear-gradient(0deg, $red2 0%, $orange2 60%, tran
 $cta_gradient: linear-gradient(180deg, #F67836 0%, #C8160C 100%);
 $courses_gradient: linear-gradient(179.2deg, #DF1307 30.17%, #FD8F29 70.46%, #FFE177 98.61%);
 $mob_padding: 4.8vw; //left&right padding in mob version
-$main_col: 1200px; //width of main column
-$brd: .5rem; //border-radius of tabs on desktop
-$brm: .9rem; //border-radius of tabs on mobiles
 $border: 3px;
-$maxblock:1728px;
+@media all and (min-width: 768px) {
+    $maxblock: 173rem !global;
+    $mb_padding: 18rem !global;
+}
+
+@media all and (max-width: 768px) {
+    $maxblock: 100%;
+    $mb_padding: 1rem;
+}
+
 @mixin mobile-padding {
     padding-left: $mob_padding;
     padding-right: $mob_padding;
@@ -58,10 +64,22 @@ $maxblock:1728px;
 }
 
 @mixin index_block {
+    width: 90%;
     max-width: $maxblock;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    padding-right: $mb_padding;
+    padding-left: $mb_padding;
+}
+
+@mixin index_block_mob {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile-padding;
 }
 
 @mixin imgroundborder {
@@ -76,6 +94,12 @@ $maxblock:1728px;
 /* -----------Desktop & common styles-------------- */
 
 @import "main";
+@media all and (min-width:768px) and (max-width:1919px) {
+    html {
+        font-size: 8px;
+    }
+}
+
 
 /* -----------/Desktop & common styles-------------- */
 
