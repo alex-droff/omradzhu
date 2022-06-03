@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'omradzhu_widgets_init' );
 function omradzhu_scripts() {
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/js/owl/assets/owl.carousel.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'owl-theme', get_template_directory_uri() . '/js/owl/assets/owl.theme.default.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'omradzhu-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'omradzhu-style', get_template_directory_uri() . '/style.min.css', array(), _S_VERSION );
 	wp_style_add_data( 'omradzhu-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), _S_VERSION, true );wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl/owl.carousel.min.js', array(), _S_VERSION, true );
