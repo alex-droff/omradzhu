@@ -1,17 +1,35 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background: $white-yellow-hor;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: auto 90% auto;
+    height: 55px;
+    &>div:first-of-type {
+        border-bottom: $border-m solid $orange2;
+    }
+    .header-content {
+        border-left: none;
+        border-bottom: $border-m solid $orange2;
+    }
+}
+
 .hero {
     @include index_block_mob;
     display: flex;
     color: $d_orange;
-    padding-top: $mb_padding;
-    padding-bottom: $mb_padding;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
     background-image: url(i/hero_omra.png);
-    background-size: auto 80%;
-    background-position: right -10% bottom;
+    background-size: auto 90%;
+    background-position: right 50% bottom;
     background-repeat: no-repeat;
-    border-left: $border solid;
-    border-image-slice: 1;
-    border-image-source: $vert-red-reverse;
-    border-width: $border;
+    border-left: none;
     &:after {
         content: '';
         position: absolute;
@@ -20,15 +38,15 @@
         bottom: 0;
         left: 0;
         z-index: -1;
-        margin: -$border;
+        margin: -$border-m;
         border-radius: inherit;
-        border-right: $border solid;
+        border-right: $border-m solid;
         border-image-slice: 1;
         border-image-source: $vert-red-transparent;
-        border-width: $border;
+        border-width: $border-m;
     }
     h1 {
-        font-size: 4.8vw;
+        font-size: 5rem;
         line-height: 1.35;
         span {
             font-size: 60%;
@@ -38,11 +56,73 @@
     }
     ul {
         list-style: disc outside;
-        font-size: 2.5rem;
-        margin-top: 3rem;
+        font-size: 1.8rem;
+        color: white;
+        margin-top: 20rem;
         margin-left: 1em;
         li {
             line-height: 1.35;
+        }
+    }
+}
+
+.spacer-liner {
+    display: grid;
+    grid-template-columns: auto 90% auto;
+    height: 3rem;
+    &>div:nth-of-type(2),
+    &>div:nth-of-type(3) {
+        border-top: $border-m solid $red2;
+    }
+    &.botm {
+        &>div:nth-of-type(2),
+        &>div:nth-of-type(3) {
+            border-bottom: $border-m solid $red2;
+            border-top: none;
+        }
+    }
+    &.rev {
+        &>div:nth-of-type(1),
+        &>div:nth-of-type(2) {
+            border-bottom: $border-m solid $red2;
+            border-top: none;
+        }
+        &>div:nth-of-type(3) {
+            border: none;
+        }
+        &.top {
+            &>div:nth-of-type(1),
+            &>div:nth-of-type(2) {
+                border-top: $border-m solid $red2;
+                border-bottom: none;
+            }
+            &>div:nth-of-type(3) {
+                border: none;
+            }
+        }
+    }
+}
+
+.welcome>div {
+    @include index_block_mob;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-left: $border-m solid;
+    border-image-slice: 1;
+    border-image-source: $vert-red-transparent-ext;
+    border-width: $border-m;
+    background: url(i/mandala.png) center right no-repeat;
+    background-size: 99rem;
+    h2 {
+        font-size: 3rem;
+        padding-top: 3rem;
+    }
+    p {
+        font-size: 2.4rem;
+        margin: 1.5em 0;
+        &.orbg {
+            font-size: 2.2rem;
+            margin-bottom: 6rem;
         }
     }
 }

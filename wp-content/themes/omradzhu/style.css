@@ -1873,6 +1873,27 @@ footer > div > div:first-of-type {
 /* -----------/Desktop & common styles-------------- */
 /* ----------------Mobile styles---------- */
 @media all and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background: -webkit-gradient(linear, left top, right top, from(white), to(#FDEEA5));
+    background: linear-gradient(90deg, white 0%, #FDEEA5 100%);
+  }
+  .site-header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 90% auto;
+        grid-template-columns: auto 90% auto;
+    height: 55px;
+  }
+  .site-header > div:first-of-type {
+    border-bottom: 2px solid #F97B0C;
+  }
+  .site-header .header-content {
+    border-left: none;
+    border-bottom: 2px solid #F97B0C;
+  }
   .hero {
     width: 100%;
     max-width: 100%;
@@ -1885,16 +1906,13 @@ footer > div > div:first-of-type {
     display: -ms-flexbox;
     display: flex;
     color: #BD420D;
-    padding-top: 18rem;
-    padding-bottom: 18rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
     background-image: url(i/hero_omra.png);
-    background-size: auto 80%;
-    background-position: right -10% bottom;
+    background-size: auto 90%;
+    background-position: right 50% bottom;
     background-repeat: no-repeat;
-    border-left: 3px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 100%);
-    border-width: 3px;
+    border-left: none;
   }
   .hero:after {
     content: '';
@@ -1904,15 +1922,15 @@ footer > div > div:first-of-type {
     bottom: 0;
     left: 0;
     z-index: -1;
-    margin: -3px;
+    margin: -2px;
     border-radius: inherit;
-    border-right: 3px solid;
+    border-right: 2px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 85%, transparent 95%, transparent 100%);
-    border-width: 3px;
+    border-width: 2px;
   }
   .hero h1 {
-    font-size: 4.8vw;
+    font-size: 5rem;
     line-height: 1.35;
   }
   .hero h1 span {
@@ -1922,12 +1940,74 @@ footer > div > div:first-of-type {
   }
   .hero ul {
     list-style: disc outside;
-    font-size: 2.5rem;
-    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 20rem;
     margin-left: 1em;
   }
   .hero ul li {
     line-height: 1.35;
+  }
+  .spacer-liner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 90% auto;
+        grid-template-columns: auto 90% auto;
+    height: 3rem;
+  }
+  .spacer-liner > div:nth-of-type(2),
+  .spacer-liner > div:nth-of-type(3) {
+    border-top: 2px solid #DA170E;
+  }
+  .spacer-liner.botm > div:nth-of-type(2),
+  .spacer-liner.botm > div:nth-of-type(3) {
+    border-bottom: 2px solid #DA170E;
+    border-top: none;
+  }
+  .spacer-liner.rev > div:nth-of-type(1),
+  .spacer-liner.rev > div:nth-of-type(2) {
+    border-bottom: 2px solid #DA170E;
+    border-top: none;
+  }
+  .spacer-liner.rev > div:nth-of-type(3) {
+    border: none;
+  }
+  .spacer-liner.rev.top > div:nth-of-type(1),
+  .spacer-liner.rev.top > div:nth-of-type(2) {
+    border-top: 2px solid #DA170E;
+    border-bottom: none;
+  }
+  .spacer-liner.rev.top > div:nth-of-type(3) {
+    border: none;
+  }
+  .welcome > div {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4.8vw;
+    padding-right: 4.8vw;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-left: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, #F97B0C 0%, #DA170E 60%, transparent 80%, transparent 100%);
+    border-width: 2px;
+    background: url(i/mandala.png) center right no-repeat;
+    background-size: 99rem;
+  }
+  .welcome > div h2 {
+    font-size: 3rem;
+    padding-top: 3rem;
+  }
+  .welcome > div p {
+    font-size: 2.4rem;
+    margin: 1.5em 0;
+  }
+  .welcome > div p.orbg {
+    font-size: 2.2rem;
+    margin-bottom: 6rem;
   }
 }
 

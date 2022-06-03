@@ -21,6 +21,7 @@ $red: #DF1818;
 $red2:#DA170E;
 $red3:#C30808;
 $white-yellow: linear-gradient(180deg, white 0%, $yellow 100%);
+$white-yellow-hor: linear-gradient(90deg, white 0%, $yellow 100%);
 $vert-orange:linear-gradient(180deg, #E22D0E 0%, #F18A32 100%);
 $vert-orange-sl:linear-gradient(180deg, $orange3 0%, $orange2 100%);
 $vert-red:linear-gradient(180deg, $red2 0%, $orange2 100%);
@@ -33,16 +34,9 @@ $cta_gradient: linear-gradient(180deg, #F67836 0%, #C8160C 100%);
 $courses_gradient: linear-gradient(179.2deg, #DF1307 30.17%, #FD8F29 70.46%, #FFE177 98.61%);
 $mob_padding: 4.8vw; //left&right padding in mob version
 $border: 3px;
-@media all and (min-width: 768px) {
-    $maxblock: 173rem !global;
-    $mb_padding: 18rem !global;
-}
-
-@media all and (max-width: 768px) {
-    $maxblock: 100%;
-    $mb_padding: 1rem;
-}
-
+$border-m: 2px;
+$maxblock: 173rem;
+$mb_padding: 18rem;
 @mixin mobile-padding {
     padding-left: $mob_padding;
     padding-right: $mob_padding;
