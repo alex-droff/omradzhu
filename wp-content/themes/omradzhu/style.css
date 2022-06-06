@@ -1235,9 +1235,13 @@ p.orbg {
   margin-right: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 35%;
-      grid-template-columns: auto 35%;
-  gap: 3rem;
+  -ms-grid-columns: auto 45%;
+      grid-template-columns: auto 45%;
+  gap: 9rem;
+}
+
+.mailing_request > div .mailing_form {
+  padding-right: 6rem;
 }
 
 .mailing_request > div > div:first-of-type {
@@ -1299,6 +1303,95 @@ p.orbg {
   color: #C30808;
 }
 
+.videogallery > div {
+  width: 90%;
+  max-width: 173rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 18rem;
+  padding-left: 18rem;
+  max-width: 130rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.videogallery .carousel-item {
+  max-height: 62rem;
+  border-radius: 6rem;
+  border: 3px solid #F34F0F;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.videogallery .carousel-item video {
+  height: 100%;
+  width: auto;
+  max-height: 100%;
+}
+
+.videogallery .owl-carousel .owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.videogallery .owl-carousel .owl-nav {
+  position: absolute;
+  top: 44%;
+  width: 130%;
+  left: -15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.videogallery .owl-carousel .owl-nav button {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  background: url(i/arrow-or.svg) center center no-repeat;
+  background-size: cover;
+  opacity: .9;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.videogallery .owl-carousel .owl-nav button:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.videogallery .owl-carousel .owl-nav button span {
+  display: none;
+}
+
+.videogallery .owl-carousel .owl-nav button.owl-next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.videogallery .owl-carousel .owl-nav button.owl-next:hover {
+  opacity: 1;
+  -webkit-transform: rotate(180deg) scale(1.1);
+          transform: rotate(180deg) scale(1.1);
+}
+
 .useful {
   background-image: url(i/mandala.png), url(i/mandala.png);
   background-position: left -27% center, right -27% center;
@@ -1314,7 +1407,7 @@ p.orbg {
   margin-right: auto;
   padding-right: 18rem;
   padding-left: 18rem;
-  padding-top: 12rem;
+  padding-top: 6rem;
   padding-bottom: 12rem;
 }
 
@@ -1692,12 +1785,17 @@ p.orbg {
 .courses {
   background: linear-gradient(179.2deg, #DF1307 30.17%, #FD8F29 70.46%, #FFE177 98.61%);
   padding: 6rem 0;
+  color: #F4F1E9;
+}
+
+.courses h3 {
+  font-size: 4rem;
+  margin-bottom: 9rem;
 }
 
 .courses .steps {
   background: url(i/steps_bg_01.png) top left no-repeat;
   background-size: 96% auto;
-  color: #F4F1E9;
 }
 
 .courses .steps > div {
@@ -1717,11 +1815,6 @@ p.orbg {
   display: grid;
   -ms-grid-columns: 50% auto;
       grid-template-columns: 50% auto;
-}
-
-.courses .steps .intro h3 {
-  font-size: 4rem;
-  margin-bottom: 9rem;
 }
 
 .courses .steps .intro ul {
@@ -1768,6 +1861,178 @@ p.orbg {
   padding-top: 10rem;
   padding-left: 28%;
   padding-right: 10%;
+}
+
+.courses .steps .steps_offer {
+  padding-top: 0;
+}
+
+.courses .steps .steps_offer > div {
+  padding: 3rem 0 4.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.courses .steps .steps_offer > div > div {
+  padding: 13rem 0 0;
+  text-align: center;
+  color: #F4F1E9;
+  font-size: 2rem;
+}
+
+.courses .steps .steps_offer > div > div:first-child {
+  background: url(i/icon-meditation.svg) top center no-repeat;
+  background-size: auto 12rem;
+}
+
+.courses .steps .steps_offer > div > div:nth-child(2) {
+  background: url(i/icon-lotus.svg) top center no-repeat;
+  background-size: auto 12rem;
+}
+
+.courses .steps .steps_offer > div > div:nth-child(3) {
+  background: url(i/noun-dancer.svg) top center no-repeat;
+  background-size: auto 12rem;
+}
+
+.courses .archetypes h3 {
+  margin-bottom: 3rem;
+}
+
+.courses .archetypes a {
+  margin-top: 3rem;
+}
+
+.courses .archetypes p {
+  color: #851F1F;
+  line-height: 1.4;
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+}
+
+.courses .archetypes p.orbg {
+  font-size: 2.8rem;
+  text-align: center;
+  line-height: 1.4;
+  color: #F4F1E9;
+  padding: 3rem 4.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#DB190E), to(#FF8B28));
+  background: linear-gradient(180deg, #DB190E 0%, #FF8B28 100%);
+  -webkit-box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+  margin-bottom: 6rem;
+}
+
+.courses .archetypes .mailing-cta {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% auto;
+      grid-template-columns: 65% auto;
+  color: #F4F1E9;
+  font-size: 1.9rem;
+  line-height: 1.3;
+  margin-top: 6rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F16A30), to(#E51D12));
+  background: linear-gradient(180deg, #F16A30 0%, #E51D12 100%);
+  border-radius: 3.3rem;
+  padding: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.courses .archetypes .mailing-cta > div:first-of-type {
+  padding-left: 8rem;
+  background: url(i/calendar.svg) left center no-repeat;
+  background-size: 5rem;
+}
+
+.courses .archetypes .mailing-cta > :last-of-type {
+  text-align: center;
+}
+
+.courses .archetypes .mailing-cta > :last-of-type a {
+  display: inline-block;
+  background: #FFCB62;
+  border-radius: 57px;
+  color: #BD420D;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  margin-top: 0;
+}
+
+.courses .archetypes .mailing-cta > :last-of-type a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.courses .archetypes > div {
+  width: 90%;
+  max-width: 173rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 18rem;
+  padding-left: 18rem;
+  background: url(i/archetypes_bg.png) top left no-repeat;
+  background-size: 96% auto;
+  padding-top: 6rem;
+  padding-bottom: 4.5rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 6rem;
+  -ms-grid-columns: 45% auto;
+      grid-template-columns: 45% auto;
+}
+
+.courses .archetypes > div .arch_photoes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.courses .archetypes > div .arch_photoes > div {
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 2rem;
+  font-size: 2.8rem;
+  -webkit-filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.25));
+  border-radius: 38px;
+}
+
+.courses .archetypes > div .arch_photoes > div:nth-child(1) {
+  background: url(i/arch_queen.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.courses .archetypes > div .arch_photoes > div:nth-child(2) {
+  background: url(i/arch_lover.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.courses .archetypes > div .arch_photoes > div:nth-child(3) {
+  background: url(i/arch_magician.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.courses .archetypes > div .arch_photoes > div:nth-child(4) {
+  background: url(i/arch_amazone.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 /* ----------FOOTER----------- */
@@ -1862,6 +2127,10 @@ footer > div .totop:hover {
 
 footer > div > div:first-of-type {
   margin-left: auto;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 @media all and (min-width: 768px) and (max-width: 1919px) {

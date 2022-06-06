@@ -259,8 +259,11 @@ p.orbg {
         max-width: 1200px;
         @include mauto;
         display: grid;
-        grid-template-columns: auto 35%;
-        gap: 3rem;
+        grid-template-columns: auto 45%;
+        gap: 9rem;
+        .mailing_form {
+            padding-right: 6rem;
+        }
         &>div:first-of-type {
             color: $l_yellow;
             font-size: 3rem;
@@ -314,6 +317,66 @@ p.orbg {
     }
 }
 
+.videogallery {
+    &>div {
+        @include index_block;
+        max-width: 130rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .carousel-item {
+        max-height: 62rem;
+        border-radius: 6rem;
+        border: $border solid $orange;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        video {
+            height: 100%;
+            width: auto;
+            max-height: 100%;
+        }
+    }
+    .owl-carousel {
+        .owl-item {
+            display: flex;
+            justify-content: center;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 44%;
+            width: 130%;
+            left: -15%;
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 8rem;
+                height: 8rem;
+                display: block;
+                background: url(i/arrow-or.svg) center center no-repeat;
+                background-size: cover;
+                opacity: .9;
+                transition: all .3s ease;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+                span {
+                    display: none;
+                }
+                &.owl-next {
+                    transform: rotate(180deg);
+                    &:hover {
+                        opacity: 1;
+                        transform: rotate(180deg) scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .useful {
     background-image: url(i/mandala.png), url(i/mandala.png);
     background-position: left -27% center, right -27% center;
@@ -321,7 +384,7 @@ p.orbg {
     background-size: 72rem;
     &>div {
         @include index_block;
-        padding-top: 12rem;
+        padding-top: 6rem;
         padding-bottom: 12rem;
         h2 {
             color: $d_orange;
@@ -610,10 +673,14 @@ p.orbg {
 .courses {
     background: $courses_gradient;
     padding: 6rem 0;
+    color: $l_grey;
+    h3 {
+        font-size: 4rem;
+        margin-bottom: 9rem;
+    }
     .steps {
         background: url(i/steps_bg_01.png) top left no-repeat;
         background-size: 96% auto;
-        color: $l_grey;
         &>div {
             @include index_block;
             padding-top: 6rem;
@@ -622,10 +689,6 @@ p.orbg {
         .intro {
             display: grid;
             grid-template-columns: 50% auto;
-            h3 {
-                font-size: 4rem;
-                margin-bottom: 9rem;
-            }
             ul {
                 padding-left: 3rem;
             }
@@ -659,6 +722,130 @@ p.orbg {
                         padding-top: 10rem;
                         padding-left: 28%;
                         padding-right: 10%;
+                    }
+                }
+            }
+        }
+        .steps_offer {
+            padding-top: 0;
+            &>div {
+                padding: 3rem 0 4.5rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                &>div {
+                    padding: 13rem 0 0;
+                    text-align: center;
+                    color: $l_grey;
+                    font-size: 2rem;
+                    &:first-child {
+                        background: url(i/icon-meditation.svg) top center no-repeat;
+                        background-size: auto 12rem;
+                    }
+                    &:nth-child(2) {
+                        background: url(i/icon-lotus.svg) top center no-repeat;
+                        background-size: auto 12rem;
+                    }
+                    &:nth-child(3) {
+                        background: url(i/noun-dancer.svg) top center no-repeat;
+                        background-size: auto 12rem;
+                    }
+                }
+            }
+        }
+    }
+    .archetypes {
+        h3 {
+            margin-bottom: 3rem;
+        }
+        a {
+            margin-top: 3rem;
+        }
+        p {
+            color: #851F1F;
+            line-height: 1.4;
+            font-size: 2.2rem;
+            margin-bottom: 1em;
+        }
+        p.orbg {
+            font-size: 2.8rem;
+            text-align: center;
+            line-height: 1.4;
+            color: $l_grey;
+            padding: 3rem 4.5rem;
+            background: linear-gradient(180deg, #DB190E 0%, #FF8B28 100%);
+            box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);
+            margin-bottom: 6rem;
+        }
+        .mailing-cta {
+            display: grid;
+            grid-template-columns: 65% auto;
+            color: $l_grey;
+            font-size: 1.9rem;
+            line-height: 1.3;
+            margin-top: 6rem;
+            background: linear-gradient(180deg, #F16A30 0%, #E51D12 100%);
+            border-radius: 3.3rem;
+            padding: 3rem;
+            align-items: center;
+            &>div:first-of-type {
+                padding-left: 8rem;
+                background: url(i/calendar.svg) left center no-repeat;
+                background-size: 5rem;
+            }
+            &>:last-of-type {
+                text-align: center;
+                a {
+                    display: inline-block;
+                    background: #FFCB62;
+                    border-radius: 57px;
+                    color: #BD420D;
+                    transition: all ease .3s;
+                    text-decoration: none;
+                    padding: 1rem 3rem;
+                    margin-top: 0;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &>div {
+            @include index_block;
+            background: url(i/archetypes_bg.png) top left no-repeat;
+            background-size: 96% auto;
+            padding-top: 6rem;
+            padding-bottom: 4.5rem;
+            display: grid;
+            gap: 6rem;
+            grid-template-columns: 45% auto;
+            .arch_photoes {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+                &>div {
+                    color: white;
+                    justify-content: center;
+                    display: flex;
+                    align-items: flex-end;
+                    padding-bottom: 2rem;
+                    font-size: 2.8rem;
+                    filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.25));
+                    border-radius: 38px;
+                    &:nth-child(1) {
+                        background: url(i/arch_queen.jpg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(2) {
+                        background: url(i/arch_lover.jpg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(3) {
+                        background: url(i/arch_magician.jpg) center center no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(4) {
+                        background: url(i/arch_amazone.jpg) center center no-repeat;
+                        background-size: cover;
                     }
                 }
             }
@@ -730,4 +917,8 @@ footer {
             margin-left: auto;
         }
     }
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
 }

@@ -138,7 +138,25 @@
 	<div class="spacer-liner rev top">
 		<div></div><div></div><div></div>
 	</div>
-	<section class="videogallery"></section>
+	<section class="videogallery">
+		<div>
+			<div id="js-carousel-2" class="owl-carousel">
+			<?php
+				$videos = CFS()->get('video_gallery');
+				$k=0;
+				foreach ($videos as $video){?>
+						<video src="<?=$video['video']?>" controls type="video/mp4" class="carousel-item video-<?=$k?>">
+						Sorry, your browser doesn't support embedded videos,
+  						but don't worry, you can <a href="<?=$video['video']?>">download it</a>
+  						and watch it with your favorite video player!
+						</video>		
+				<?
+				$k++;  
+				}
+				?>			
+			</div>
+		</div>
+	</section>
 	<section class="useful">
 		<div>
 			<div class="two_col bl_3">
@@ -164,8 +182,7 @@
 			<?
 			$j++;  
 			}
-			?>
-			
+			?>			
 			</div>
 		</div>
 	</section>
@@ -191,8 +208,38 @@
 					<div>Вы освобождаетесь от психологических ловушек, в которые попадает большинство людей</div>
 				</div>
 			</div>
+			<div class="steps_offer">
+				<p class="yelbg">Из чего состоит курс?</p>
+				<div>
+					<div>Психологические настройки</div>
+					<div>Медитация и практики расслабления</div>
+					<div>Танцы на сакральной мышце</div>
+				</div>
+				<a href="" class="redbut">Обратиться</a>
+			</div>
 		</div>
-		<div class="archetypes"></div>
+		<div class="archetypes">
+			<div>
+			<div>
+				<h3>Курс “Архетипы”</h3>
+				<p class="orbg grad">“Дай себе возможность<br>оказаться на пике самой себя”</p>
+				<p>Двухнедельный, выездной тренинг в Турции</p>
+				<p>Архетипы - это возможность гармонизации всех четырех стихий. Вы узнаете свои психологические портреты через познание каждой стихии и соедините их внутри себя</p>
+				<p>Курс рассчитан для тех, кто прошёл все ступени и желает выйти на совершенно другой уровень своей жизни</p>
+				<a href="" class="redbut">Обратиться</a>
+				<div class="mailing-cta">
+					<div>Узнать мое Расписание можно подписавшись на мою ежемесячную рассылку</div>
+					<div><a href="" class="mailing-cta-butt">Подписаться</a></div>
+				</div>
+			</div>
+			<div class="arch_photoes">
+				<div>Королева</div>
+				<div>Любовница</div>
+				<div>Волшебница</div>
+				<div>Амазонка</div>
+			</div>
+			</div>
+		</div>
 	</section>
 	<section class="offer-form">
 		<div>
