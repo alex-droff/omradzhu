@@ -27,7 +27,19 @@
 
 	<header id="masthead" class="site-header">
 		<div></div>
-		<div class="header-content"></div>
+		<div class="header-content">
+			<div>
+				<div class="social">
+					<?  $youtube_link = CFS()->get( 'youtube_link' );
+						$facebook_link = CFS()->get( 'facebook_link' );
+						$instagram_link = CFS()->get( 'instagram_link' );?>
+					
+					<? if($facebook_link):?><a href="<?= $facebook_link['url'] ?>" class="facebook" target="_blank"></a><?endif;?>
+					<? if($instagram_link):?><a href="<?= $instagram_link['url'] ?>" class="instagram" target="_blank"></a><?endif;?>
+					<? if($youtube_link):?><a href="<?= $youtube_link['url']; ?>" class="youtube" target="_blank"></a><?endif;?>
+				</div>
+			</div>
+		</div>
 		<div></div>
 		<? /*?>
 		<nav id="site-navigation" class="main-navigation">
