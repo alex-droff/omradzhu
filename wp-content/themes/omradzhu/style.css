@@ -918,8 +918,8 @@ html {
 /* Typography */
 body {
   font-family: 'PT Serif', serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#FDEEA5));
-  background: linear-gradient(180deg, white 0%, #FDEEA5 100%);
+  background: -webkit-gradient(linear, left top, right top, from(white), to(#FDEEA5));
+  background: linear-gradient(90deg, white 0%, #FDEEA5 100%);
 }
 
 h1,
