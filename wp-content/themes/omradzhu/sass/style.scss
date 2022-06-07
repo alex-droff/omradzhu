@@ -37,9 +37,16 @@ $border: 3px;
 $border-m: 2px;
 $maxblock: 173rem;
 $mb_padding: 18rem;
+$mob_padding:3vw;
+$mob_maxwidth: 94vw;
 @mixin mobile-padding {
     padding-left: $mob_padding;
     padding-right: $mob_padding;
+}
+
+@mixin padding-zero {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @mixin mauto {
@@ -68,17 +75,26 @@ $mb_padding: 18rem;
 }
 
 @mixin index_block_mob {
-    width: 100%;
-    max-width: 100%;
+    width: $mob_maxwidth;
+    max-width: $mob_maxwidth;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    @include mobile-padding;
+    @include padding-zero;
+    box-sizing: border-box;
 }
 
 @mixin imgroundborder {
     filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
     border-radius: 9rem;
+    position: relative;
+    background-clip: padding-box;
+    border: solid $border $orange;
+}
+
+@mixin imgroundborder_m {
+    filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.25));
+    border-radius: 3rem;
     position: relative;
     background-clip: padding-box;
     border: solid $border $orange;

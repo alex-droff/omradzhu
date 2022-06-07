@@ -27,7 +27,7 @@
                     margin: 10,
                     dotsEach: 2,
                     slideBy: 1,
-                    autoWidth: true,
+                    //autoWidth: true,
                 },
 
                 768: {
@@ -55,7 +55,7 @@
                     margin: 10,
                     dotsEach: 2,
                     slideBy: 1,
-                    autoWidth: true,
+                    //autoWidth: true,
                 },
 
                 768: {

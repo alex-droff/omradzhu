@@ -13,6 +13,14 @@ body {
     background: $white-yellow-hor;
 }
 
+.nd {
+    display: none !important;
+}
+
+.nm {
+    display: block !important;
+}
+
 h1,
 h2,
 h3 {
@@ -123,7 +131,7 @@ p {
 }
 
 .spacer-liner {
-    display: grid;
+    display: grid !important;
     grid-template-columns: auto $maxblock auto;
     height: 3rem;
     &>div:nth-of-type(2),
@@ -850,8 +858,8 @@ p.orbg {
             display: grid;
             gap: 6rem;
             grid-template-columns: 45% auto;
-            .arch_photoes {
-                display: grid;
+            .arch_photoes.nm {
+                display: grid !important;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 3rem;
                 &>div {
